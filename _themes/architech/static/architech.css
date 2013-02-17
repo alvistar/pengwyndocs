@@ -5216,6 +5216,10 @@ body {
 div.arc-sidenav {
   width: 21.97%;
 }
+/* ------- READTHEDOCS ------ */
+.rtd_doc_footer {
+  z-index: 2000;
+}
 /* ----- TABLE ------ */
 table.docutils {
   width: 100%;
