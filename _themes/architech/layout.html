@@ -102,10 +102,11 @@
   </head>
   <body>
 {%- block header %}
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">ArchiTech</a>
+          <!--<a class="brand" href="#"><img src={{ pathto("_static/architechlogo.png",1) }} /></a>-->
+          <a class="brand" href="#">Architech</a>
           <ul class="nav pull-left">
             {%- for rellink in rellinks %}
               <li><a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}">{{ rellink[3] }}</a>
@@ -119,14 +120,13 @@
     </div>
 {% endblock %}
 
-
 {%- block content %}
   {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
 
   <div class="container">
     <div class="row">
       <div class="span3">
-        <div class="well">
+        <div class="well affix" style="width:180px">
         <!--<div class="well sidebar-nav" data-spy="affix" daga-offset-rop="200">-->
             <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
             {{ toctree() }}
