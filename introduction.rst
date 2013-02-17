@@ -1,3 +1,4 @@
+
 Introduction
 ============
 
@@ -28,12 +29,12 @@ Sitara SDK supports different platforms.
 
 You can get information about the other platforms at:
 
-    ======================  ================================================================================  =================================
-    Platform                Document EVM                                                                      Provider
-    ======================  ================================================================================  =================================
-    AM335xEVM               http://processors.wiki.ti.com/index.php/AM335x_General_Purpose_EVM_HW_User_Guide  http://www.ti.com
-    AM335x StarterKit (SK)  http://processors.wiki.ti.com/index.php/AM335xStarterKitHardwareUsersGuide        http://www.ti.com/tool/tmdssk3358
-    ======================  ================================================================================  =================================
+    ======================  ================================================================================================     =================================
+    Platform                Document EVM                                                                                         Provider
+    ======================  ================================================================================================     =================================
+    AM335xEVM               `AM335xEVM <http://processors.wiki.ti.com/index.php/AM335x_General_Purpose_EVM_HW_User_Guide/>`_     http://www.ti.com/
+    AM335x StarterKit (SK)  http://processors.wiki.ti.com/index.php/AM335xStarterKitHardwareUsersGuide                           http://www.ti.com/tool/tmdssk3358
+    ======================  ================================================================================================     =================================
 
 Hardware requirements
 ---------------------
@@ -61,4 +62,5 @@ Linux System has been pre-flashed on the board.
 If you turn on the Pengwyn and the display expansion board is connected the “Matrix Application Launcher v2” will appear.
 
 .. image:: /_static/TIMatrix.png
+
    

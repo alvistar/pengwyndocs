@@ -1,0 +1,299 @@
+@import "bootstrap.less";
+
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-bottom: 60px;
+      }
+
+      div.arc-sidenav {
+         width:21.97%;
+      }
+/* ----- TABLE ------ */
+
+table.docutils {
+  width: 100%;
+  margin-bottom: 20px;
+  table-layout: fixed; /* We don't want tables overflowing containing div */
+}
+
+table.docutils th,
+table.docutils td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+  word-wrap: break-word; /* We don't want tables overflowing containing div */
+}
+
+table.docutils th {
+  font-weight: bold;
+}
+
+table.docutils thead th {
+  vertical-align: bottom;
+}
+
+table.docutils caption + thead tr:first-child th,
+table.docutils caption + thead tr:first-child td,
+table.docutils colgroup + thead tr:first-child th,
+table.docutils colgroup + thead tr:first-child td,
+table.docutils thead:first-child tr:first-child th,
+table.docutils thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+table.docutils tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+table.docutils table.docutils {
+  background-color: #ffffff;
+}
+
+table.docutils-condensed th,
+table.docutils-condensed td {
+  padding: 4px 5px;
+}
+
+table.docutils-bordered {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+table.docutils-bordered th,
+table.docutils-bordered td {
+  border-left: 1px solid #dddddd;
+}
+
+table.docutils-bordered caption + thead tr:first-child th,
+table.docutils-bordered caption + tbody tr:first-child th,
+table.docutils-bordered caption + tbody tr:first-child td,
+table.docutils-bordered colgroup + thead tr:first-child th,
+table.docutils-bordered colgroup + tbody tr:first-child th,
+table.docutils-bordered colgroup + tbody tr:first-child td,
+table.docutils-bordered thead:first-child tr:first-child th,
+table.docutils-bordered tbody:first-child tr:first-child th,
+table.docutils-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+table.docutils-bordered thead:first-child tr:first-child > th:first-child,
+table.docutils-bordered tbody:first-child tr:first-child > td:first-child,
+table.docutils-bordered tbody:first-child tr:first-child > th:first-child {
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+table.docutils-bordered thead:first-child tr:first-child > th:last-child,
+table.docutils-bordered tbody:first-child tr:first-child > td:last-child,
+table.docutils-bordered tbody:first-child tr:first-child > th:last-child {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+}
+
+table.docutils-bordered thead:last-child tr:last-child > th:first-child,
+table.docutils-bordered tbody:last-child tr:last-child > td:first-child,
+table.docutils-bordered tbody:last-child tr:last-child > th:first-child,
+table.docutils-bordered tfoot:last-child tr:last-child > td:first-child,
+table.docutils-bordered tfoot:last-child tr:last-child > th:first-child {
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+}
+
+table.docutils-bordered thead:last-child tr:last-child > th:last-child,
+table.docutils-bordered tbody:last-child tr:last-child > td:last-child,
+table.docutils-bordered tbody:last-child tr:last-child > th:last-child,
+table.docutils-bordered tfoot:last-child tr:last-child > td:last-child,
+table.docutils-bordered tfoot:last-child tr:last-child > th:last-child {
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+table.docutils-bordered tfoot + tbody:last-child tr:last-child td:first-child {
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+}
+
+table.docutils-bordered tfoot + tbody:last-child tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+}
+
+table.docutils-bordered caption + thead tr:first-child th:first-child,
+table.docutils-bordered caption + tbody tr:first-child td:first-child,
+table.docutils-bordered colgroup + thead tr:first-child th:first-child,
+table.docutils-bordered colgroup + tbody tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+table.docutils-bordered caption + thead tr:first-child th:last-child,
+table.docutils-bordered caption + tbody tr:first-child td:last-child,
+table.docutils-bordered colgroup + thead tr:first-child th:last-child,
+table.docutils-bordered colgroup + tbody tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+}
+
+table.docutils-striped tbody > tr:nth-child(odd) > td,
+table.docutils-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+table.docutils-hover tbody tr:hover > td,
+table.docutils-hover tbody tr:hover > th {
+  background-color: #f5f5f5;
+}
+
+table td[class*="span"],
+table th[class*="span"],
+.row-fluid table td[class*="span"],
+.row-fluid table th[class*="span"] {
+  display: table-cell;
+  float: none;
+  margin-left: 0;
+}
+
+table.docutils td.span1,
+table.docutils th.span1 {
+  float: none;
+  width: 44px;
+  margin-left: 0;
+}
+
+table.docutils td.span2,
+table.docutils th.span2 {
+  float: none;
+  width: 124px;
+  margin-left: 0;
+}
+
+table.docutils td.span3,
+table.docutils th.span3 {
+  float: none;
+  width: 204px;
+  margin-left: 0;
+}
+
+table.docutils td.span4,
+table.docutils th.span4 {
+  float: none;
+  width: 284px;
+  margin-left: 0;
+}
+
+table.docutils td.span5,
+table.docutils th.span5 {
+  float: none;
+  width: 364px;
+  margin-left: 0;
+}
+
+table.docutils td.span6,
+table.docutils th.span6 {
+  float: none;
+  width: 444px;
+  margin-left: 0;
+}
+
+table.docutils td.span7,
+table.docutils th.span7 {
+  float: none;
+  width: 524px;
+  margin-left: 0;
+}
+
+table.docutils td.span8,
+table.docutils th.span8 {
+  float: none;
+  width: 604px;
+  margin-left: 0;
+}
+
+table.docutils td.span9,
+table.docutils th.span9 {
+  float: none;
+  width: 684px;
+  margin-left: 0;
+}
+
+table.docutils td.span10,
+table.docutils th.span10 {
+  float: none;
+  width: 764px;
+  margin-left: 0;
+}
+
+table.docutils td.span11,
+table.docutils th.span11 {
+  float: none;
+  width: 844px;
+  margin-left: 0;
+}
+
+table.docutils td.span12,
+table.docutils th.span12 {
+  float: none;
+  width: 924px;
+  margin-left: 0;
+}
+
+table.docutils tbody tr.success > td {
+  background-color: #dff0d8;
+}
+
+table.docutils tbody tr.error > td {
+  background-color: #f2dede;
+}
+
+table.docutils tbody tr.warning > td {
+  background-color: #fcf8e3;
+}
+
+table.docutils tbody tr.info > td {
+  background-color: #d9edf7;
+}
+
+table.docutils-hover tbody tr.success:hover > td {
+  background-color: #d0e9c6;
+}
+
+table.docutils-hover tbody tr.error:hover > td {
+  background-color: #ebcccc;
+}
+
+table.docutils-hover tbody tr.warning:hover > td {
+  background-color: #faf2cc;
+}
+
+table.docutils-hover tbody tr.info:hover > td {
+  background-color: #c4e3f3;
+}
+/* -- Admonition -- */
+
+.admonition {
+	.alert;
+}
+
+.note {
+	.alert-info;
+}
+
+
+
+
+
