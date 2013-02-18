@@ -1,3 +1,4 @@
+
 Compile U-Boot, MLO and Kernel
 ------------------------------
 
@@ -32,11 +33,13 @@ As TI is suggesting,  we, as well, recommend keeping the object files separated 
   
   O = object-directory
 
-Where "object-directory" is the name of a folder you created for this purpose.
+Where "object-directory" is the name of a folder you created for this purpose with::
+
+  mkdir object-directory
 
 You can now compile the bootloader with the following commands::
 
-  rm -rf ./object-directory (if it is not the first time that you build the project)
+  rm -rf ./object-directory
   export PATH="/home/pengwyn/ti-sdk-am335x-evm-05.06.00.00/linux-devkit/bin:$PATH"
   make O=object-directory CROSS_COMPILE=arm-arago-linux-gnueabi- ARCH=arm pengwyn
 

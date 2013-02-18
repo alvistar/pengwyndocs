@@ -1,3 +1,4 @@
+
 Pengwyn SDK
 ===========
 Contents:
@@ -11,5 +12,6 @@ Contents:
    compile_uboot
    filesystem
    load_os
+   flash
    ccs
    

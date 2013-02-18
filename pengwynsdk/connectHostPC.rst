@@ -1,3 +1,4 @@
+
 Connect host PC to Pengwyn board
 --------------------------------
 
@@ -20,7 +21,11 @@ Open a terminal (ctrl + alt + t) and open Minicom with the following options::
 
   minicom -w -s 
 
-Reset the board with the reset button on the board, located near the sd-card slot. You will see the startup of the Pengwyn on the terminal. 
+If all works correctly you will se this screen:
+
+.. image:: /_static/connecthost4.png
+
+Reset the board with the reset button on the board, located near the sd-card slot. You will see the startup of the Pengwyn on the terminal.
 
 At login insert: root and press enter. 
 
@@ -31,5 +36,3 @@ Configure the IP address with the command::
   ifconfig eth0 192.168.0.101
 
 Now the connection is completed.
-
-It is possible connect in SSH with Putty on Windows.

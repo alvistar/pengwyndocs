@@ -1,3 +1,4 @@
+
 SDK Structure Overview
 ----------------------
 At the start of the Ubuntu desktop, there are three icons:

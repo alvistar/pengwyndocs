@@ -24,10 +24,10 @@ Sitara SDK supports different platforms.
     ========    ======  ===========     =======     ======      =========   ==============
     Platform    SDK     PSP             U-Boot      Kernel      Toolchain   Release Date
     ========    ======  ===========     =======     ======      =========   ==============
-    Pengwyn     5.06    04.06.00.09     2012.10     3.2         gcc4 5.3    December 2012
+    Pengwyn     5.06    04.06.00.09     2012.10     3.2         Gcc4.5.3    December 2012
     ========    ======  ===========     =======     ======      =========   ==============
 
-You can get information about the other platforms at:
+You can get information about the other platforms at:kk
 
     ======================  ================================================================================================     =================================
     Platform                Document EVM                                                                                         Provider
@@ -42,7 +42,7 @@ Hardware requirements
 - Pengwyn board 
 - Ethernet cable
 - Mini-USB type B cable 
-- Windows Host PC with at least 1GB of RAM and 40GB of free hard drive space
+- Windows or Linux Host PC with at least 1GB (2GB recommended) of RAM and 40GB of free hard drive space
 
 .. image:: _static/hardwareRequirements.png
 

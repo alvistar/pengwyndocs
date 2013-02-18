@@ -1,3 +1,4 @@
+
 Appendix
 ========
 
@@ -10,12 +11,19 @@ Opkg Basics
 Opkg (Open PacKaGe Management) is a lightweight package management system. It is written in C and resembles apt/dpkg in operation. It is intended for use on embedded Linux devices and is used in this capacity in the OpenEmbedded and OpenWrt projects. 
 
 - opkg list-installed command to know what packages are installed on the file system. For example use this command with grep:
+
 - opkg list-installed | grep -i name_packet
+
 - opkg search name_packet show where are the files installed of the packet
+
 - opkg whatdepends name_packet show what packets depend on the “name_packet” package
+
 - opkg remove name_packet remove packages, there are important options:
-	-force-depends This option will force the removal of the package but will leave any packages that depend on this package installed
-	-force-removal-of-dependent-packages This option will go up the dependency list and remove all packages in the dependency chain
+	
+	+ -force-depends This option will force the removal of the package but will leave any packages that depend on this package installed
+	
+	+ -force-removal-of-dependent-packages This option will go up the dependency list and remove all packages in the dependency chain
+
 -	opkg install name_packet install the packages
 
 How to confgure a new project in CCS

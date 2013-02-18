@@ -1,5 +1,6 @@
-Load the Operating System on the Pengwyn
-----------------------------------------
+
+Copy the Operating System to the SD
+-----------------------------------
 
 .. image:: /_static/sdimage.png
    :align: left
@@ -74,8 +75,6 @@ Finally provide filesystem location:
  
 /home/pengwyn/ti-sdk-am335x-evm-05.06.00.00/targetNFS
 
-and confirm it with y key. The script will copy all the files to the sd-card.
+and confirm it with y key.
 
-To boot Linux on Pengwyn insert the SD-CARD into the card slot and turn the board on. 
-
-The board will automatically load data from the sd-card and boot the new operating system.
+This operation will take minutes.
