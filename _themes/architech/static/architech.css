@@ -5213,8 +5213,56 @@ body {
 
   padding-bottom: 60px;
 }
-div.arc-sidenav {
-  width: 21.97%;
+.sidebar-fixed {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 180px;
+}
+/* ------- GENERAL ------- */
+img.align-left,
+.figure.align-left,
+object.align-left {
+  clear: left;
+  float: left;
+  margin-right: 1em;
+}
+img.align-right,
+.figure.align-right,
+object.align-right {
+  clear: right;
+  float: right;
+  margin-left: 1em;
+}
+img.align-center,
+.figure.align-center,
+object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Some space between images in main section */
+.section img {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
 }
 /* ------- READTHEDOCS ------ */
 .rtd-badge {
@@ -5468,8 +5516,18 @@ table.docutils-hover tbody tr.info:hover > td {
   -moz-border-radius: 4px;
   border-radius: 4px;
   color: #c09853;
+  clear: both;
+}
+.admonition-title {
+  font-weight: bold;
+  font-size: 17.5px;
 }
 .note {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.tip {
   color: #3a87ad;
   background-color: #d9edf7;
   border-color: #bce8f1;

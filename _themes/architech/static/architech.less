@@ -5,9 +5,54 @@
         padding-bottom: 60px;
       }
 
-      div.arc-sidenav {
-         width:21.97%;
+      .sidebar-fixed {
+      	.well;
+      	.affix;
+      	width:180px;
       }
+
+
+
+/* ------- GENERAL ------- */
+
+img.align-left, .figure.align-left, object.align-left {
+    clear: left;
+    float: left;
+    margin-right: 1em;
+}
+
+img.align-right, .figure.align-right, object.align-right {
+    clear: right;
+    float: right;
+    margin-left: 1em;
+}
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Some space between images in main section */
+
+.section {
+  img {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
 
 /* ------- READTHEDOCS ------ */
 
@@ -294,10 +339,20 @@ table.docutils-hover tbody tr.info:hover > td {
 
 .admonition {
 	.alert;
+    clear: both;
+}
+
+.admonition-title {
+  font-weight: bold;
+  font-size: 17.5px;
 }
 
 .note {
 	.alert-info;
+}
+
+.tip {
+  .alert-info;
 }
 
 
