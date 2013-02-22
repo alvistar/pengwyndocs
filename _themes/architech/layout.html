@@ -1,61 +1,66 @@
 {#
-    basic/layout.html
-    ~~~~~~~~~~~~~~~~~
+basic/layout.html
+~~~~~~~~~~~~~~~~~
 
-    Master layout template for Sphinx themes.
+Master layout template for Sphinx themes.
 
-    :copyright: Copyright 2007-2011 by the Sphinx team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
+:copyright: Copyright 2007-2011 by the Sphinx team, see AUTHORS.
+:license: BSD, see LICENSE for details.
 #}
 
 
 {# {% set css_files = ["_static/bootstrap.css"] %} #}
 
-{% set script_files = script_files+["_static/analytics.js"] %}
+{# {% set script_files = script_files+["_static/analytics.js"] %} #}
 
 {%- block doctype -%}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {%- endblock %}
 {%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
 {%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
 {%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and
-                         (sidebars != []) %}
+(sidebars != []) %}
 {%- set url_root = pathto('', 1) %}
 {# XXX necessary? #}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {%- if not embedded and docstitle %}
-  {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+{%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
 {%- else %}
-  {%- set titlesuffix = "" %}
+{%- set titlesuffix = "" %}
 {%- endif %}
 
 {%- macro script() %}
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '{{ url_root }}',
-        VERSION:     '{{ release|e }}',
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '{{ url_root }}',
+        VERSION: '{{ release|e }}',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
-        HAS_SOURCE:  {{ has_source|lower }}
-      };
-    </script>
-    {%- for scriptfile in script_files %}
-    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor %}
+        HAS_SOURCE: {
+    {
+        has_source | lower
+    }
+    }
+    }
+    ;
+</script>
+{%- for scriptfile in script_files %}
+<script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+{%- endfor %}
 {%- endmacro %}
 
 {%- macro css() %}
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-    {%- for cssfile in css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
-    {%- endfor %}
+<link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css"/>
+<link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css"/>
+{%- for cssfile in css_files %}
+<link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"/>
+{%- endfor %}
 {%- endmacro %}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}"/>
     {{ metatags }}
     {%- block htmltitle %}
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
@@ -72,76 +77,78 @@
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
     {%- endif %}
     {%- endif %}
-{%- block linktags %}
+    {%- block linktags %}
     {%- if hasdoc('about') %}
-    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
+    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}"/>
     {%- endif %}
     {%- if hasdoc('genindex') %}
-    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}"/>
     {%- endif %}
     {%- if hasdoc('search') %}
-    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}"/>
     {%- endif %}
     {%- if hasdoc('copyright') %}
-    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}"/>
     {%- endif %}
-    <link rel="top" title="{{ docstitle|e }}" href="{{ pathto('index') }}" />
+    <link rel="top" title="{{ docstitle|e }}" href="{{ pathto('index') }}"/>
     {%- if parents %}
-    <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}" />
+    <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}"/>
     {%- endif %}
     {%- if next %}
-    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}"/>
     {%- endif %}
     {%- if prev %}
-    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}"/>
     {%- endif %}
-{%- endblock %}
-{%- block extrahead %} {% endblock %}
-  </head>
-  <body>
+    {%- endblock %}
+    {%- block extrahead %} {% endblock %}
+</head>
+<body>
 {%- block header %}
-    <div class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
+<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
         <div class="container">
-          <!--<a class="brand" href="#"><img src={{ pathto("_static/architechlogo.png",1) }} /></a>-->
-          <a class="brand" href="#">Architech</a>
-          <ul class="nav pull-left">
-            {%- for rellink in rellinks %}
-              <li><a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}">{{ rellink[3] }}</a>
-            {%- endfor %}
-          </ul>
-          <form class="navbar-search pull-right" action="{{ pathto('search') }}" method="get">
-            <input type="text" class="search-query" placeholder="Search" name="q">
-          </form>
+            <!--<a class="brand" href="#"><img src={{ pathto("_static/architechlogo.png",1) }} /></a>-->
+            <a class="brand" href="#">Architech</a>
+            <ul class="nav pull-left">
+                {%- for rellink in rellinks %}
+                <li><a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}">{{ rellink[3] }}</a>
+                    {%- endfor %}
+            </ul>
+            <form class="navbar-search pull-right" action="{{ pathto('search') }}" method="get">
+                <input type="text" class="search-query" placeholder="Search" name="q">
+            </form>
         </div>
-      </div>
     </div>
+</div>
 {% endblock %}
 
 {%- block content %}
-  {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+{%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
 
-  <div class="container">
+<div class="container">
     <div class="row">
-      <div class="span3">
-        <div class="well affix" style="width:180px">
-        <!--<div class="well sidebar-nav" data-spy="affix" daga-offset-rop="200">-->
-            <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
-            {{ toctree() }}
+        <div class="span3">
+            <div class="well affix" style="width:180px">
+                <!--<div class="well sidebar-nav" data-spy="affix" daga-offset-rop="200">-->
+                <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
+                {{ toctree() }}
+            </div>
         </div>
-      </div>
 
-      <div class="span9">
-        {% block body %} {% endblock %}
-      </div>
-  </div>
+        <div class="span9">
+            <div class="body">
+                {% block body %} {% endblock %}
+            </div>
+        </div>
+    </div>
 
-{%- endblock %}
+    {%- endblock %}
 
-{%- block footer %}
-      <div class="navbar navbar-inverse navbar-fixed-bottom">
+    {%- block footer %}
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="navbar-inner">
-          <div class="container">
+            <div class="container">
                 <span class="brand">
                 {%- if show_copyright %}
                   {%- if hasdoc('copyright') %}
@@ -157,9 +164,9 @@
                   {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
                 {%- endif %}
               </span>
-          </div>
+            </div>
         </div>
-      </div>
-{%- endblock %}
-  </body>
+    </div>
+    {%- endblock %}
+</body>
 </html>
