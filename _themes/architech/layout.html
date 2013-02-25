@@ -62,7 +62,9 @@
     {%- endblock %}
     {{ css() }}
     {%- if not embedded %}
-    {{ script() }}
+
+     {{ script() }}
+
     {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
           title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
